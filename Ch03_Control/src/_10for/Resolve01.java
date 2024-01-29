@@ -12,11 +12,18 @@ import java.util.Scanner;
 public class Resolve01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.print("금액 입력 : ");
 		int price = sc.nextInt();
+		int num;
 
-		int money_50000 = price / 50000;
-		int money_10000 = (price - money_50000) / 10000;
-		int money_5000 = (price - money_50000) / 10000;
+		int arr[] = { 50000, 10000, 5000, 1000, 500, 100, 50, 10, 1 };
+
+		for (int i = 0; i < arr.length; i++) {
+			num = price / arr[i];
+			if (num != 0)
+				System.out.println(arr[i] + "원 : " + num + "매 ");
+			price -= arr[i] * num;
+		}
 
 	}
 

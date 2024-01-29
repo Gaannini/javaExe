@@ -6,7 +6,7 @@ public class WhileEx {
 		int i = 0;
 		while (i < 10) {
 			i++;
-			System.out.print(i + ", ");
+			System.out.print(i + " ");
 		}
 	}
 
