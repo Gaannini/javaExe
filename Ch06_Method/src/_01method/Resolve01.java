@@ -26,6 +26,7 @@ public class Resolve01 {
 		int num1 = sc.nextInt();
 		System.out.print("두번째 수 입력 > ");
 		int num2 = sc.nextInt();
+
 		System.out.println("작은 값 : " + MinNumber(num1, num2));
 		System.out.println("큰 값 : " + MaxNumber(num1, num2));
 	}
