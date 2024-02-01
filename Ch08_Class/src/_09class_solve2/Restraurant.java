@@ -36,7 +36,7 @@ public class Restraurant {
 		// 주문받기
 		System.out.print(" >> ");
 		menuNum = sc.nextInt();
-		if (menuNum < foods.length)
+		if (menuNum <= foods.length)
 			Order(menuNum);
 		else
 			System.out.println("해당 메뉴는 없습니다.");

@@ -31,7 +31,7 @@ public class FruitMain {
 		seller.showSaleResult();
 		buyer.showBuyResult();
 
-		seller.saleApple(buyer, 3000);
+		seller.saleApple(buyer, 2000);
 
 		// buyer.buyApple(seller, 2000);
 
