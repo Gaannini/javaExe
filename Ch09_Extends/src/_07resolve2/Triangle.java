@@ -11,22 +11,26 @@ public class Triangle {
 		System.out.println("삼각형 밑변 : " + base);
 	}
 
+	// 밑변과 높이를 모두 변경하는 메소드
 	public void Change_All(int change_high, int change_base) {
 		this.high = change_high;
 		this.base = change_base;
 		System.out.println("삼각형의 높이를 " + high + "(으)로 변경하고 밑변 " + base + "(으)로 변경하였습니다.");
 	}
 
+	// 높이만 변경하는 메소드
 	public void Change_high(int change_high) {
 		this.high = change_high;
 		System.out.println("삼각형의 높이를 " + high + "(으)로 변경하였습니다.");
 	}
 
+	// 밑변만 변경하는 메소드
 	public void Change_base(int change_base) {
 		this.base = change_base;
 		System.out.println("삼각형의 밑변 " + base + "(으)로 변경하였습니다.");
 	}
 
+	// 삼각형의 넓이를 반환하는 메소
 	public double TriangleArea() {
 		return ((double) high * (double) base) / 2;
 	}
