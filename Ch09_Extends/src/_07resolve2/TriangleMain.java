@@ -16,9 +16,18 @@ public class TriangleMain {
 		// 두번째 객체
 		Triangle tri2 = new Triangle(35, 3);
 		System.out.printf("삼각형의 넓이는 %.1f 입니다\n", tri2.TriangleArea());
-		// 밑변경
+		// 밑변변경
 		tri2.Change_base(10);
 		System.out.printf("삼각형의 넓이는 %.1f 입니다\n", tri2.TriangleArea());
+
+		System.out.println();
+
+		// 세번째 객체
+		Triangle tri3 = new Triangle(15, 7);
+		System.out.printf("삼각형의 넓이는 %.1f 입니다\n", tri3.TriangleArea());
+		// 높이, 밑변 변경
+		tri2.Change_All(10, 5);
+		System.out.printf("삼각형의 넓이는 %.1f 입니다\n", tri3.TriangleArea());
 	}
 
 }
