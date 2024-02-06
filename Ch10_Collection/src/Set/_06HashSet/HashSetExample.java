@@ -1,4 +1,4 @@
-package _06HashSet;
+package Set._06HashSet;
 
 import java.util.HashSet;
 import java.util.Iterator;

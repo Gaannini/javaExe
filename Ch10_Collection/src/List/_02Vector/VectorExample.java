@@ -1,9 +1,9 @@
-package _02Vector;
+package List._02Vector;
 
 import java.util.List;
 import java.util.Vector;
 
-import _01List.Board;
+import List._01List.Board;
 
 public class VectorExample {
 	public static void main(String[] args) {

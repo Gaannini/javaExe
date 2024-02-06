@@ -1,4 +1,4 @@
-package _01List;
+package List._01List;
 
 public class Board {
 	private String subject;

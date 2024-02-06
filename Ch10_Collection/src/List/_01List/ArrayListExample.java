@@ -1,4 +1,4 @@
-package _01List;
+package List._01List;
 
 /*
  * 자료구조(Data Structure
