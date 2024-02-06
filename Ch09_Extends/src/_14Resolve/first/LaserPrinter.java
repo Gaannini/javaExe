@@ -1,9 +1,9 @@
 package _14Resolve.first;
 
-public class RaserPrinter extends Printer {
+public class LaserPrinter extends Printer {
 	int NumofToner;
 
-	public RaserPrinter(String model, String maker, String type, int numofprint, int amount, int numoftoner) {
+	public LaserPrinter(String model, String maker, String type, int numofprint, int amount, int numoftoner) {
 		super(model, maker, type, numofprint, amount);
 		this.NumofToner = numoftoner;
 	}
