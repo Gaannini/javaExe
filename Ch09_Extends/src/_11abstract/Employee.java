@@ -1,4 +1,4 @@
-package _11abstract.copy;
+package _11abstract;
 
 public abstract class Employee {
 	protected String empno; // 사번

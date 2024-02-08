@@ -10,7 +10,7 @@ public abstract class Employee {
 	}
 
 	public void showEmployeeInfo() {
-		System.out.println("----------------");
+		System.out.println("--------------------");
 		System.out.println("Empno: " + empno);
 		System.out.println("name: " + name);
 	}

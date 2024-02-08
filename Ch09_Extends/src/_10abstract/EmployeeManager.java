@@ -15,12 +15,10 @@ public class EmployeeManager {
 		System.out.println("2. 임시직");
 		System.out.println("3. 일용직");
 		System.out.println("4. 전체정보보기");
-		System.out.println("5. 정규직 보기");
-		System.out.println("6. 임시직 보기");
-		System.out.println("7. 일용직 보기");
-		System.out.println("8. 종료");
+		System.out.println("5. 종료");
 		System.out.print("번호 입력 >>");
 		int sel = sc.nextInt();
+		System.out.println();
 		return sel;
 	}
 
@@ -85,33 +83,6 @@ public class EmployeeManager {
 		}
 	}
 
-	private void viewRegularEmployee() {
-		for (int i = 0; i < this.numOfEmp; i++) {
-			if (empArr[i] instanceof RegularEmployee)
-				this.empArr[i].showEmployeeInfo();
-			else
-				continue;
-		}
-	}
-
-	private void viewTempEmployee() {
-		for (int i = 0; i < this.numOfEmp; i++) {
-			if (empArr[i] instanceof TempEmployee)
-				this.empArr[i].showEmployeeInfo();
-			else
-				continue;
-		}
-	}
-
-	private void viewPartTimeEmployee() {
-		for (int i = 0; i < this.numOfEmp; i++) {
-			if (empArr[i] instanceof PartTimeEmployee)
-				this.empArr[i].showEmployeeInfo();
-			else
-				continue;
-		}
-	}
-
 	public void run() {
 		boolean isRun = true;
 		while (isRun) {
@@ -130,18 +101,6 @@ public class EmployeeManager {
 			case EmpMenu.ALL_INFO:
 				emp = null;
 				viewAllEmployee();
-				break;
-			case EmpMenu.REG_EMP_INFO:
-				emp = null;
-				viewRegularEmployee();
-				break;
-			case EmpMenu.TEMP_EMP_INFO:
-				emp = null;
-				viewTempEmployee();
-				break;
-			case EmpMenu.PART_EMP_INFO:
-				emp = null;
-				viewPartTimeEmployee();
 				break;
 			case EmpMenu.EXIT:
 				emp = null;

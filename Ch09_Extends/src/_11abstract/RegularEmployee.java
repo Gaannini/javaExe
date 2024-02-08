@@ -1,4 +1,4 @@
-package _11abstract.copy;
+package _11abstract;
 
 //정규직 사원
 public class RegularEmployee extends Employee {

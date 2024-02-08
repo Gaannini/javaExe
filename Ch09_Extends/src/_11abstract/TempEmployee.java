@@ -1,4 +1,4 @@
-package _11abstract.copy;
+package _11abstract;
 
 //임시직 사원
 public class TempEmployee extends Employee {

@@ -1,4 +1,4 @@
-package _11abstract.copy;
+package _11abstract;
 
 //일용직
 public class PartTimeEmployee extends Employee {

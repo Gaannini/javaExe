@@ -83,14 +83,16 @@ public class EmployeeManager {
 			Employee E = empList.get(i);
 			E.showEmployeeInfo();
 		}
+		System.out.println("--------------------");
 	}
 
 	private void viewRegularEmployee() {
 		for (int i = 0; i < this.empList.size(); i++) {
 			Employee E = empList.get(i);
-			if (E instanceof RegularEmployee)
+			if (E instanceof RegularEmployee) {
 				E.showEmployeeInfo();
-			else
+				System.out.println("--------------------");
+			} else
 				continue;
 		}
 	}
@@ -98,9 +100,10 @@ public class EmployeeManager {
 	private void viewTempEmployee() {
 		for (int i = 0; i < this.empList.size(); i++) {
 			Employee E = empList.get(i);
-			if (E instanceof TempEmployee)
+			if (E instanceof TempEmployee) {
 				E.showEmployeeInfo();
-			else
+				System.out.println("--------------------");
+			} else
 				continue;
 		}
 	}
@@ -108,9 +111,10 @@ public class EmployeeManager {
 	private void viewPartTimeEmployee() {
 		for (int i = 0; i < this.empList.size(); i++) {
 			Employee E = empList.get(i);
-			if (E instanceof PartTimeEmployee)
+			if (E instanceof PartTimeEmployee) {
 				E.showEmployeeInfo();
-			else
+				System.out.println("--------------------");
+			} else
 				continue;
 		}
 	}
@@ -122,8 +126,12 @@ public class EmployeeManager {
 			Employee E = empList.get(i);
 			if (E.empno.equals(searchempno)) {
 				E.showEmployeeInfo();
-				System.out.println();
+				System.out.println("--------------------");
 				break;
+			} else if (i == this.empList.size() - 1 && !E.empno.equals(searchempno)) {
+				System.out.println("--------------------");
+				System.out.println("해당하는 사원이 없습니다.");
+				System.out.println("--------------------");
 			} else
 				continue;
 		}
@@ -136,8 +144,6 @@ public class EmployeeManager {
 			Employee E = empList.get(i);
 			if (E.empno.equals(modifyempno)) {
 				if (E instanceof RegularEmployee) {
-					System.out.print("사번 >> ");
-					String empno = sc.next();
 					System.out.print("이름 >> ");
 					String name = sc.next();
 					System.out.print("연봉 >> ");
@@ -145,30 +151,30 @@ public class EmployeeManager {
 					System.out.print("보너스 >> ");
 					int bonus = sc.nextInt();
 					System.out.println();
-					empList.set(i, new RegularEmployee(empno, name, yearSalary, bonus));
+					empList.set(i, new RegularEmployee(modifyempno, name, yearSalary, bonus));
 				} else if (E instanceof TempEmployee) {
-					System.out.print("사번 >> ");
-					String empno = sc.next();
 					System.out.print("이름 >> ");
 					String name = sc.next();
 					System.out.print("연봉 >> ");
 					int yearSalary = sc.nextInt();
 					System.out.print("계약기간 >> ");
 					int hireYear = sc.nextInt();
-					empList.set(i, new TempEmployee(empno, name, yearSalary, hireYear));
+					empList.set(i, new TempEmployee(modifyempno, name, yearSalary, hireYear));
 				} else if (E instanceof PartTimeEmployee) {
-					System.out.print("사번 >> ");
-					String empno = sc.next();
 					System.out.print("이름 >> ");
 					String name = sc.next();
 					System.out.print("일당 >> ");
 					int dailyPay = sc.nextInt();
 					System.out.print("일한 일수 >> ");
 					int workDay = sc.nextInt();
-					empList.set(i, new PartTimeEmployee(empno, name, dailyPay, workDay));
+					empList.set(i, new PartTimeEmployee(modifyempno, name, dailyPay, workDay));
 				}
 				System.out.println();
 				break;
+			} else if (i == this.empList.size() - 1 && !E.empno.equals(modifyempno)) {
+				System.out.println("--------------------");
+				System.out.println("해당하는 사원이 없습니다.");
+				System.out.println("--------------------");
 			} else
 				continue;
 		}
@@ -181,8 +187,14 @@ public class EmployeeManager {
 			Employee E = empList.get(i);
 			if (E.empno.equals(delempno)) {
 				empList.remove(i);
-				System.out.println();
+				System.out.println("--------------------");
+				System.out.println(delempno + " 사원을 삭제하였습니다.");
+				System.out.println("--------------------");
 				break;
+			} else if (i == this.empList.size() - 1 && !E.empno.equals(delempno)) {
+				System.out.println("--------------------");
+				System.out.println("해당하는 사원이 없습니다.");
+				System.out.println("--------------------");
 			} else
 				continue;
 		}
