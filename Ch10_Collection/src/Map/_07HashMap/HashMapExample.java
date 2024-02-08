@@ -39,7 +39,7 @@ public class HashMapExample {
 		System.out.println();
 
 		// 키 Set 컬렉션을 얻고, 반복해서 키와 값을 얻기
-		Set<String> keySet = map.keySet();
+		Set<String> keySet = map.keySet();// 모든 키를 Set객체에 담아 리턴
 		Iterator<String> keyIterator = keySet.iterator();
 		while (keyIterator.hasNext()) {
 			String k = keyIterator.next();
